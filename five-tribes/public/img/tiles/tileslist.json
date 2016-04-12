@@ -1,0 +1,210 @@
+TileList.insert({
+	name: "lmarket1",
+	number: 0,
+	type: "lmarket",
+	score: 4,
+	source: "../public/img/tiles/lmarket1.png"
+});
+TileList.insert({
+	name: "lmarket2",
+	number: 1,
+	type: "lmarket",
+	score: 4,
+	source: "../public/img/tiles/lmarket2.png"
+});
+TileList.insert({
+	name: "lmarket3",
+	number: 2,
+	type: "lmarket",
+	score: 4,
+	source: "../public/img/tiles/lmarket3.png"
+});
+TileList.insert({
+	name: "lmarket4",
+	number: 3,
+	type: "lmarket",
+	score: 4,
+	source: "../public/img/tiles/lmarket4.png"
+});
+TileList.insert({
+	name: "oasis1",
+	number: 4,
+	type: "oasis",
+	score: 8,
+	source: "../public/img/tiles/oasis1.png"
+});
+TileList.insert({
+	name: "oasis2",
+	number: 5,
+	type: "oasis",
+	score: 8,
+	source: "../public/img/tiles/oasis2.png"
+});
+TileList.insert({
+	name: "oasis3",
+	number: 6,
+	type: "oasis",
+	score: 8,
+	source: "../public/img/tiles/oasis3.png"
+});
+TileList.insert({
+	name: "oasis4",
+	number: 7,
+	type: "oasis",
+	score: 8,
+	source: "../public/img/tiles/oasis4.png"
+});
+TileList.insert({
+	name: "oasis5",
+	number: 8,
+	type: "oasis",
+	score: 8,
+	source: "../public/img/tiles/oasis5.png"
+});
+TileList.insert({
+	name: "oasis6",
+	number: 9,
+	type: "oasis",
+	score: 8,
+	source: "../public/img/tiles/oasis6.png"
+});
+TileList.insert({
+	name: "sacred1",
+	number: 10,
+	type: "sacred",
+	score: 15,
+	source: "../public/img/tiles/sacred1.png"
+});
+TileList.insert({
+	name: "sacred2",
+	number: 11,
+	type: "sacred",
+	score: 12,
+	source: "../public/img/tiles/sacred2.png"
+});
+TileList.insert({
+	name: "sacred3",
+	number: 12,
+	type: "sacred",
+	score: 10,
+	source: "../public/img/tiles/sacred3.png"
+});
+TileList.insert({
+	name: "sacred4",
+	number: 13,
+	type: "sacred",
+	score: 6,
+	source: "../public/img/tiles/sacred4.png"
+});
+TileList.insert({
+	name: "sacred5",
+	number: 14,
+	type: "sacred",
+	score: 6,
+	source: "../public/img/tiles/sacred5.png"
+});
+TileList.insert({
+	name: "sacred6",
+	number: 15,
+	type: "sacred",
+	score: 6,
+	source: "../public/img/tiles/sacred6.png"
+});
+TileList.insert({
+	name: "sacred7",
+	number: 16,
+	type: "sacred",
+	score: 6,
+	source: "../public/img/tiles/sacred7.png"
+});
+TileList.insert({
+	name: "smarket1",
+	number: 17,
+	type: "smarket",
+	score: 6,
+	source: "../public/img/tiles/smarket1.png"
+});
+TileList.insert({
+	name: "smarket2",
+	number: 18,
+	type: "smarket",
+	score: 6,
+	source: "../public/img/tiles/smarket2.png"
+});
+TileList.insert({
+	name: "smarket3",
+	number: 19,
+	type: "smarket",
+	score: 6,
+	source: "../public/img/tiles/smarket3.png"
+});
+TileList.insert({
+	name: "smarket4",
+	number: 20,
+	type: "smarket",
+	score: 6,
+	source: "../public/img/tiles/smarket4.png"
+});
+TileList.insert({
+	name: "smarket5",
+	number: 21,
+	type: "smarket",
+	score: 6,
+	source: "../public/img/tiles/smarket5.png"
+});
+TileList.insert({
+	name: "smarket6",
+	number: 22,
+	type: "smarket",
+	score: 6,
+	source: "../public/img/tiles/smarket6.png"
+});
+TileList.insert({
+	name: "smarket7",
+	number: 23,
+	type: "smarket",
+	score: 6,
+	source: "../public/img/tiles/smarket7.png"
+});
+TileList.insert({
+	name: "smarket8",
+	number: 24,
+	type: "smarket",
+	score: 6,
+	source: "../public/img/tiles/smarket8.png"
+});
+TileList.insert({
+	name: "village1",
+	number: 25,
+	type: "village",
+	score: 5,
+	source: "../public/img/tiles/village1.png"
+});
+TileList.insert({
+	name: "village2",
+	number: 26,
+	type: "village",
+	score: 5,
+	source: "../public/img/tiles/village2.png"
+});
+TileList.insert({
+	name: "village3",
+	number: 27,
+	type: "village",
+	score: 5,
+	source: "../public/img/tiles/village3.png"
+});
+TileList.insert({
+	name: "village4",
+	number: 28,
+	type: "village",
+	score: 5,
+	source: "../public/img/tiles/village4.png"
+});
+TileList.insert({
+	name: "village5",
+	number: 29,
+	type: "village",
+	score: 5,
+	source: "../public/img/tiles/village5.png"
+});
