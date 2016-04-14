@@ -5,17 +5,14 @@
 <body>
   <h1>Five Tribes</h1>
   <h2>Bruno Cathala</h2>
-  <!-- <img class="tile" src="img/tiles/lmarket1.png"> -->
+  {{newGame}}
+  <!-- {{shuffle}} -->
   {{> tile}}
+
 
 </body>
 
 <template name="tile">
-  <!-- <ul>
-    {{#each tileDeck}}
-      <li><img class="tile" src="{{source}}"></li>
-    {{/each}}
-  </ul> -->
   {{#each tileDeck}}
     <img class="tile" src="{{source}}">
   {{/each}}

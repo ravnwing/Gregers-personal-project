@@ -1,4 +1,4 @@
-TileList.update({
+TileList.insert({
 	name: "lmarket1",
 	number: 0,
 	type: "lmarket",
