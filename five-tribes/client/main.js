@@ -11,17 +11,17 @@ Template.body.helpers({
     tempDeck = [];
     tempDeck = TileList.find().fetch();
     tileDeck = [];
-    // TileList.find().forEach(function(doc){
-    //   tempDeck.push(doc);
-    // });
 
-    for (var i = 0; i < tempDeck.length; i++) {
-      var pulledTile;
-      var rand = Math.floor(Math.random()*tempDeck.length);;
-      tileDeck.push(tempDeck[rand]);
-      tempDeck.slice(rand, rand+1);
+    // for (var i = 0; i < tempDeck.length; i++) {
+    while (tempDeck.length != 0){
+      var rand = Math.floor(Math.random()*tempDeck.length);
+      if (rand != 1) {
+        tileDeck.push(tempDeck[rand]);
+        tempDeck.splice(rand, 1);
+      }
     };
-    console.log(tileDeck);
+    Session.set("tilePass", tileDeck);
+
 
   },
   'shuffle': function(){
@@ -45,8 +45,9 @@ Template.body.helpers({
 
 
 Template.tile.helpers({
-  'tileDeck': function(){
-    console.log("fx");
-    return tempDeck;
+  'tilePlace': function(){
+    var tileDeck = Session.get("tilePass");
+    console.log(tileDeck);
+    return tileDeck;
   },
 });
