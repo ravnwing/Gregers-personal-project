@@ -1,18 +1,9 @@
 Template.body.helpers({
-  rendered: function(){
-    // var tempDeck = [];
-    // tileOrder = [];
-    // for(var i = 0; i < 30; i++){
-    //   tempDeck.push(TileList.find({}))
-    // };
-    // return tempDeck;
-  },
   'newGame': function(){
     tempDeck = [];
     tempDeck = TileList.find().fetch();
     tileDeck = [];
 
-    // for (var i = 0; i < tempDeck.length; i++) {
     while (tempDeck.length != 0){
       var rand = Math.floor(Math.random()*tempDeck.length);
       if (rand != 1) {
@@ -22,12 +13,23 @@ Template.body.helpers({
     };
     Session.set("tilePass", tileDeck);
 
+    tempDeck = MerchList.find().fetch();
+    merchDeck = [];
+    merchant = [];
+
+
+    while (tempDeck.length != 0){
+      var rand = Math.floor(Math.random()*tempDeck.length);
+      if (rand != 1) {
+        merchDeck.push(tempDeck[rand]);
+        tempDeck.splice(rand, 1);
+      }
+    };
+    Session.set("merchPass", merchDeck);
+
 
   },
-  'shuffle': function(){
-    length = tempDeck.length;
-    console.log(tempDeck);
-  },
+
 
   'tilePosition': function(){
     var x, y;
@@ -42,12 +44,21 @@ Template.body.helpers({
   },
 });
 
-
-
 Template.tile.helpers({
   'tilePlace': function(){
     var tileDeck = Session.get("tilePass");
-    console.log(tileDeck);
     return tileDeck;
+  },
+});
+
+Template.merch.helpers({
+  'merchShow': function(){
+    var merchDeck = Session.get('merchPass');
+    var marketplace = [];
+    while (marketplace.length <9){
+      marketplace.push(merchDeck.pop());
+    }
+    return marketplace;
+
   },
 });

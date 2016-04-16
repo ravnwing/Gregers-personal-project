@@ -1,0 +1,280 @@
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+
+MerchList.insert({
+	name: "grain",
+	count: 6,
+	source: "img/merch/grain.png"
+});
+MerchList.insert({
+	name: "grain",
+	count: 6,
+	source: "img/merch/grain.png"
+});
+MerchList.insert({
+	name: "grain",
+	count: 6,
+	source: "img/merch/grain.png"
+});
+MerchList.insert({
+	name: "grain",
+	count: 6,
+	source: "img/merch/grain.png"
+});
+MerchList.insert({
+	name: "grain",
+	count: 6,
+	source: "img/merch/grain.png"
+});
+MerchList.insert({
+	name: "grain",
+	count: 6,
+	source: "img/merch/grain.png"
+});
+
+MerchList.insert({
+	name: "fish",
+	count: 6,
+	source: "img/merch/fish.png"
+});
+MerchList.insert({
+	name: "fish",
+	count: 6,
+	source: "img/merch/fish.png"
+});
+MerchList.insert({
+	name: "fish",
+	count: 6,
+	source: "img/merch/fish.png"
+});
+MerchList.insert({
+	name: "fish",
+	count: 6,
+	source: "img/merch/fish.png"
+});
+MerchList.insert({
+	name: "fish",
+	count: 6,
+	source: "img/merch/fish.png"
+});
+MerchList.insert({
+	name: "fish",
+	count: 6,
+	source: "img/merch/fish.png"
+});
+
+MerchList.insert({
+	name: "pottery",
+	count: 6,
+	source: "img/merch/pot.png"
+});
+MerchList.insert({
+	name: "pottery",
+	count: 6,
+	source: "img/merch/pot.png"
+});
+MerchList.insert({
+	name: "pottery",
+	count: 6,
+	source: "img/merch/pot.png"
+});
+MerchList.insert({
+	name: "pottery",
+	count: 6,
+	source: "img/merch/pot.png"
+});
+MerchList.insert({
+	name: "pottery",
+	count: 6,
+	source: "img/merch/pot.png"
+});
+MerchList.insert({
+	name: "pottery",
+	count: 6,
+	source: "img/merch/pot.png"
+});
+
+MerchList.insert({
+	name: "silk",
+	count: 4,
+	source: "img/merch/silk.png"
+});
+MerchList.insert({
+	name: "silk",
+	count: 4,
+	source: "img/merch/silk.png"
+});
+MerchList.insert({
+	name: "silk",
+	count: 4,
+	source: "img/merch/silk.png"
+});
+MerchList.insert({
+	name: "silk",
+	count: 4,
+	source: "img/merch/silk.png"
+});
+
+MerchList.insert({
+	name: "paper",
+	count: 4,
+	source: "img/merch/paper.png"
+});
+MerchList.insert({
+	name: "paper",
+	count: 4,
+	source: "img/merch/paper.png"
+});
+MerchList.insert({
+	name: "paper",
+	count: 4,
+	source: "img/merch/paper.png"
+});
+MerchList.insert({
+	name: "paper",
+	count: 4,
+	source: "img/merch/paper.png"
+});
+
+MerchList.insert({
+	name: "spice",
+	count: 4,
+	source: "img/merch/spice.png"
+});
+MerchList.insert({
+	name: "spice",
+	count: 4,
+	source: "img/merch/spice.png"
+});
+MerchList.insert({
+	name: "spice",
+	count: 4,
+	source: "img/merch/spice.png"
+});
+MerchList.insert({
+	name: "spice",
+	count: 4,
+	source: "img/merch/spice.png"
+});
+
+MerchList.insert({
+	name: "gold",
+	count: 2,
+	source: "img/merch/gold.png"
+});
+MerchList.insert({
+	name: "gold",
+	count: 2,
+	source: "img/merch/gold.png"
+});
+
+MerchList.insert({
+	name: "ivory",
+	count: 2,
+	source: "img/merch/ivory.png"
+});
+MerchList.insert({
+	name: "ivory",
+	count: 2,
+	source: "img/merch/ivory.png"
+});
+
+MerchList.insert({
+	name: "gems",
+	count: 2,
+	source: "img/merch/gems.png"
+});
+MerchList.insert({
+	name: "gems",
+	count: 2,
+	source: "img/merch/gems.png"
+});
+

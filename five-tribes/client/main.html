@@ -6,8 +6,12 @@
   <h1>Five Tribes</h1>
   <h2>Bruno Cathala</h2>
   {{newGame}}
-  <!-- {{shuffle}} -->
   {{> tile}}
+  <br  />
+  <img class = "merch" id="merchBack" src="img/merch/back.png"  />
+  {{> merch}}
+
+
 
 
 </body>
@@ -15,5 +19,11 @@
 <template name="tile">
   {{#each tilePlace}}
     <img class="tile" src="{{source}}">
+  {{/each}}
+</template>
+
+<template name="merch">
+  {{#each merchShow}}
+    <img class="merch" src="{{source}}">
   {{/each}}
 </template>
