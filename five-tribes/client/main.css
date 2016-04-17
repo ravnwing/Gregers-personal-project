@@ -1,7 +1,23 @@
 /* CSS declarations go here */
+@font-face {
+  font-family: feathergraphyClean;
+  src: url("fonts/Feathergraphy_Clean.ttf");
+}
+@font-face {
+  font-family: feathergraphy;
+  src: url("fonts/Feathergraphy2.ttf");
+}
+
+
+body{
+  background-image: url("img/sand.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
 .tile{
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
 }
 
 .merch{

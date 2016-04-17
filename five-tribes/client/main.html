@@ -4,10 +4,9 @@
 
 <body>
   <h1>Five Tribes</h1>
-  <h2>Bruno Cathala</h2>
+  <h3>Bruno Cathala</h3>
   {{newGame}}
   {{> tile}}
-  <br  />
   <img class = "merch" id="merchBack" src="img/merch/back.png"  />
   {{> merch}}
 
@@ -17,9 +16,11 @@
 </body>
 
 <template name="tile">
-  {{#each tilePlace}}
-    <img class="tile" src="{{source}}">
-  {{/each}}
+  <!-- <div class = "row"> -->
+    {{#each tilePlace}}
+      <img class="tile" src="{{source}}">
+    {{/each}}
+  <!-- </div> -->
 </template>
 
 <template name="merch">

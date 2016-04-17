@@ -1,7 +1,9 @@
 Template.body.helpers({
   'newGame': function(){
     tempDeck = [];
+    count = 0;
     tempDeck = TileList.find().fetch();
+    tileRow = [];
     tileDeck = [];
 
     while (tempDeck.length != 0){
@@ -9,7 +11,13 @@ Template.body.helpers({
       if (rand != 1) {
         tileDeck.push(tempDeck[rand]);
         tempDeck.splice(rand, 1);
+        count++;
       }
+      // if (count == 6){
+      //   tileDeck.push(tileRow);
+      //   count = 0;
+      //   tileRow = [];
+      // }
     };
     Session.set("tilePass", tileDeck);
 
@@ -45,10 +53,35 @@ Template.body.helpers({
 });
 
 Template.tile.helpers({
+  'rowPlace': function(){
+    var tileDeck = Session.get("tilePass");
+    var tileRow = [];
+
+    for (var i = 0; i < 6; i++) {
+      tileRow.push(tileDeck.pop());
+    }
+
+    return tileRow;
+  },
+
+
+
+
   'tilePlace': function(){
     var tileDeck = Session.get("tilePass");
     return tileDeck;
   },
+  'rowCounter': function(){
+    count++;
+    space = false
+    if ((count%6 == 0) && (count < 25)) {
+      space = true;
+    }
+    else{
+      space = false
+    }
+    return space;
+  }
 });
 
 Template.merch.helpers({
