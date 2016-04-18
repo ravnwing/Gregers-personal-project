@@ -1,4 +1,4 @@
-Template.body.helpers({
+Template.gameStart.helpers({
   'newGame': function(){
     tempDeck = [];
     count = 0;

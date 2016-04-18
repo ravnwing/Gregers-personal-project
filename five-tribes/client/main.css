@@ -1,6 +1,6 @@
 /* CSS declarations go here */
 @font-face {
-  font-family: feathergraphyClean;
+  font-family: feathergraphy-clean;
   src: url("fonts/Feathergraphy_Clean.ttf");
 }
 @font-face {
@@ -12,7 +12,8 @@
 body{
   background-image: url("img/sand.png");
   background-repeat: repeat;
-  background-attachment: fixed;
+
+  background-attachment: 0% 30%;
 }
 
 .tile{
