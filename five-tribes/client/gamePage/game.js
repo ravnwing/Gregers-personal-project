@@ -122,17 +122,6 @@ Template.tile.helpers({
     return tileRow4;
   },
 
-  'rowCounter': function(){
-    count++;
-    space = false
-    if ((count%6 == 0) && (count < 25)) {
-      space = true;
-    }
-    else{
-      space = false
-    }
-    return space;
-  }
 });
 
 Template.merch.helpers({
