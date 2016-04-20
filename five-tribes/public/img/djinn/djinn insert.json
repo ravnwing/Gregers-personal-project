@@ -1,0 +1,132 @@
+DjinnList.insert({
+	name: "alamin",
+	score: 5,
+	action: "scoring",
+	source: "img/tiles/alamin.png"
+});
+DjinnList.insert({
+	name: "anunnak",
+	score: 8,
+	action: "action",
+	source: "img/tiles/anunnak.png"
+});
+DjinnList.insert({
+	name: "baal",
+	score: 6,
+	action: "reaction",
+	source: "img/tiles/baal.png"
+});
+DjinnList.insert({
+	name: "boaz",
+	score: 6,
+	action: "bonus",
+	source: "img/tiles/boaz.png"
+});
+DjinnList.insert({
+	name: "bouraq",
+	score: 6,
+	action: "action",
+	source: "img/tiles/bouraq.png"
+});
+DjinnList.insert({
+	name: "echidna",
+	score: 4,
+	action: "action",
+	source: "img/tiles/echidna.png"
+});
+DjinnList.insert({
+	name: "enki",
+	score: 8,
+	action: "action",
+	source: "img/tiles/enki.png"
+});
+DjinnList.insert({
+	name: "hagis",
+	score: 10,
+	action: "action",
+	source: "img/tiles/hagis.png"
+});
+DjinnList.insert({
+	name: "haourvatat",
+	score: 8,
+	action: "scoring",
+	source: "img/tiles/haurvatat.png"
+});
+DjinnList.insert({
+	name: "iblis",
+	score: 8,
+	action: "action",
+	source: "img/tiles/iblis.png"
+});
+DjinnList.insert({
+	name: "jafaar",
+	score: 6,
+	action: "scoring",
+	source: "img/tiles/jafaar.png"
+});
+DjinnList.insert({
+	name: "kandicha",
+	score: 6,
+	action: "bonus",
+	source: "img/tiles/kandicha.png"
+});
+DjinnList.insert({
+	name: "kumarbi",
+	score: 6,
+	action: "action",
+	source: "img/tiles/kumarbi.png"
+});
+DjinnList.insert({
+	name: "lamia",
+	score: 10,
+	action: "action",
+	source: "img/tiles/lamia.png"
+});
+DjinnList.insert({
+	name: "leta",
+	score: 4,
+	action: "action",
+	source: "img/tiles/leta.png"
+});
+DjinnList.insert({
+	name: "marid",
+	score: 6,
+	action: "reaction",
+	source: "img/tiles/marid.png"
+});
+DjinnList.insert({
+	name: "monkir",
+	score: 6,
+	action: "reaction",
+	source: "img/tiles/monkir.png"
+});
+DjinnList.insert({
+	name: "nekir",
+	score: 6,
+	action: "reaction",
+	source: "img/tiles/nekir.png"
+});
+DjinnList.insert({
+	name: "shamhat",
+	score: 6,
+	action: "scoring",
+	source: "img/tiles/shamhat.png"
+});
+DjinnList.insert({
+	name: "sibittis",
+	score: 4,
+	action: "action",
+	source: "img/tiles/sibittis.png"
+});
+DjinnList.insert({
+	name: "sloar",
+	score: 8,
+	action: "action",
+	source: "img/tiles/sloar.png"
+});
+DjinnList.insert({
+	name: "utug",
+	score: 4,
+	action: "action",
+	source: "img/tiles/utug.png"
+});

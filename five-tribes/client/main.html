@@ -7,23 +7,57 @@
     <h1>Five Tribes</h1>
     <h3>Bruno Cathala</h3>
     {{newGame}}
-    {{> tile}}
-    <img class = "merch" id="merchBack" src="img/merch/back.png"  />
-    {{> merch}}
+    <div class = "gameboard">
+      {{> tile}}
+    </div>
+    <div class="marketplace">
+      <img class = "merch" id="merchBack" src="img/merch/back.png"  />
+      {{> merch}}
+    </div>
+    <div class="shownDjinn">
+      <img class = "djinn" id="djinnBack" src="img/djinn/back.png"  />
+      {{>djinn}}
+    </div>
 
   </body>
 </template>
 
 <template name="tile">
-  <!-- <div class = "row"> -->
-    {{#each tilePlace}}
+  <div class="row0">
+    {{#each row0Place}}
       <img class="tile" src="{{source}}">
     {{/each}}
-  <!-- </div> -->
+  </div>
+  <div class="row1">
+    {{#each row1Place}}
+      <img class="tile" src="{{source}}">
+    {{/each}}
+  </div>
+  <div class="row2">
+    {{#each row2Place}}
+      <img class="tile" src="{{source}}">
+    {{/each}}
+  </div>
+  <div class="row3">
+    {{#each row3Place}}
+      <img class="tile" src="{{source}}">
+    {{/each}}
+  </div>
+  <div class="row4">
+    {{#each row4Place}}
+      <img class="tile" src="{{source}}">
+    {{/each}}
+  </div>
 </template>
 
 <template name="merch">
   {{#each merchShow}}
     <img class="merch" src="{{source}}">
+  {{/each}}
+</template>
+
+<template name="djinn">
+  {{#each djinnShow}}
+    <img class="djinn" src="{{source}}">
   {{/each}}
 </template>
