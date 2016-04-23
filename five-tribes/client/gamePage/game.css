@@ -1,4 +1,9 @@
 /* CSS declarations go here */
+h1{
+  font-family: feathergraphy-clean;
+  font-size: 175%
+}
+
 @font-face {
   font-family: feathergraphy-clean;
   src: url("fonts/Feathergraphy_Clean.ttf");
@@ -8,12 +13,14 @@
   src: url("fonts/Feathergraphy2.ttf");
 }
 
-
 body{
   background-image: url("img/sand.png");
   background-repeat: repeat;
-
   background-attachment: 0% 30%;
+}
+
+.loginDiv{
+  margin-bottom: 5px;
 }
 
 .tile{

@@ -1,5 +1,5 @@
 Template.gameStart.helpers({
-  'newGame': function(){
+  'Game': function(){
     tempDeck = [];
     count = 0;
     tempDeck = TileList.find().fetch();
@@ -85,19 +85,6 @@ Template.gameStart.helpers({
   Session.set("djinnPass", djinnDeck);
 },
 
-
-
-  'tilePosition': function(){
-    var x, y;
-    position = [];
-    for (var i = 0; i < 6; i++) {
-      for (var j = 0; j < 5; j++){
-        var temp = String(i) + ", " + String(j);
-        position.push(temp);
-      }
-    }
-    return position;
-  },
 });
 
 Template.tile.helpers({

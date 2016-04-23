@@ -1,14 +1,16 @@
+<head>
+  <title>Five Tribes</title>
+</head>
+
 <template name ="startPage">
-
-  <div class="login-item">
-    {{> loginButtons}}
-  </div>
-
   <div class = "flex-container">
     <div class="img-container">
       <img src="img/fivetribes.jpg"  />
     </div>
     <div class="button-container">
+      <div class="login-item">
+        {{> loginButtons}}
+      </div>
       <a href="/game">
         <div class="newgame-button">
           <h1>New Game</h1>
