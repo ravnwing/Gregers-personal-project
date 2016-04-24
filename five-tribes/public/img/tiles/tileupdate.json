@@ -15,7 +15,7 @@ TileList.insert({
 	type: "lmarket",
 	score: 4,
 	source: "img/tiles/lmarket3.png"
-});
+});	
 TileList.insert({
 	name: "lmarket4",
 	type: "lmarket",
@@ -71,7 +71,7 @@ TileList.insert({
 	source: "img/tiles/sacred2.png"
 });
 TileList.insert({
-	name: "sacred3"
+	name: "sacred3",
 	type: "sacred",
 	score: 10,
 	source: "img/tiles/sacred3.png"

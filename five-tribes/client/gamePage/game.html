@@ -4,6 +4,7 @@
     <h3>Bruno Cathala</h3>
     <div class="loginDiv">{{> loginButtons}}</div>
     {{Game}}
+    {{> newGame}}
     <div class = "gameboard">
       {{> tile}}
     </div>
@@ -22,7 +23,7 @@
 <template name="tile">
   <div class="row0">
     {{#each row0Place}}
-      <img class="tile" src="{{source}}">
+      <img class="tile" src="img/tiles/{{name}}.png">
     {{/each}}
   </div>
   <div class="row1">
