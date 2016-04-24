@@ -26,20 +26,16 @@ a{
   display:flex;
   flex-grow: 1;
   flex-direction: column;
+  align-items: center;
   margin-left: 7px;
 }
 
 .newgame-button{
   flex: 0, 0;
-  width:100%;
-  justify-content: center;
 }
 
 .loadgame-button{
   flex: 0, 0;
-  width:100%;
-  justify-content: center;
-  margin-top: 0px;
 }
 
 .button-container h1{
@@ -49,5 +45,37 @@ a{
   margin-bottom: 0px;
   border: 5px solid #222047;
   background: #f99c4e;
-
 }
+
+
+
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #7faec0;
+   background: -webkit-gradient(linear, left top, left bottom, from(#d9793d), to(#7faec0));
+   background: -webkit-linear-gradient(top, #d9793d, #7faec0);
+   background: -moz-linear-gradient(top, #d9793d, #7faec0);
+   background: -ms-linear-gradient(top, #d9793d, #7faec0);
+   background: -o-linear-gradient(top, #d9793d, #7faec0);
+   padding: 11.5px 50px;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #000000;
+   font-size: 26px;
+   font-family: feathergraphy-clean;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #7f5a7b;
+   background: #7f5a7b;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #242043;
+   background: #242043;
+   }
