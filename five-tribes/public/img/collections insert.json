@@ -1,0 +1,864 @@
+DjinnList.insert({
+	name: "alamin",
+	score: 5,
+	action: "scoring",
+	source: "img/djinn/alamin.png"
+});
+DjinnList.insert({
+	name: "anunnak",
+	score: 8,
+	action: "action",
+	source: "img/djinn/anunnak.png"
+});
+DjinnList.insert({
+	name: "baal",
+	score: 6,
+	action: "reaction",
+	source: "img/djinn/baal.png"
+});
+DjinnList.insert({
+	name: "boaz",
+	score: 6,
+	action: "bonus",
+	source: "img/djinn/boaz.png"
+});
+DjinnList.insert({
+	name: "bouraq",
+	score: 6,
+	action: "action",
+	source: "img/djinn/bouraq.png"
+});
+DjinnList.insert({
+	name: "echidna",
+	score: 4,
+	action: "action",
+	source: "img/djinn/echidna.png"
+});
+DjinnList.insert({
+	name: "enki",
+	score: 8,
+	action: "action",
+	source: "img/djinn/enki.png"
+});
+DjinnList.insert({
+	name: "hagis",
+	score: 10,
+	action: "action",
+	source: "img/djinn/hagis.png"
+});
+DjinnList.insert({
+	name: "haourvatat",
+	score: 8,
+	action: "scoring",
+	source: "img/djinn/haurvatat.png"
+});
+DjinnList.insert({
+	name: "iblis",
+	score: 8,
+	action: "action",
+	source: "img/djinn/iblis.png"
+});
+DjinnList.insert({
+	name: "jafaar",
+	score: 6,
+	action: "scoring",
+	source: "img/djinn/jafaar.png"
+});
+DjinnList.insert({
+	name: "kandicha",
+	score: 6,
+	action: "bonus",
+	source: "img/djinn/kandicha.png"
+});
+DjinnList.insert({
+	name: "kumarbi",
+	score: 6,
+	action: "action",
+	source: "img/djinn/kumarbi.png"
+});
+DjinnList.insert({
+	name: "lamia",
+	score: 10,
+	action: "action",
+	source: "img/djinn/lamia.png"
+});
+DjinnList.insert({
+	name: "leta",
+	score: 4,
+	action: "action",
+	source: "img/djinn/leta.png"
+});
+DjinnList.insert({
+	name: "marid",
+	score: 6,
+	action: "reaction",
+	source: "img/djinn/marid.png"
+});
+DjinnList.insert({
+	name: "monkir",
+	score: 6,
+	action: "reaction",
+	source: "img/djinn/monkir.png"
+});
+DjinnList.insert({
+	name: "nekir",
+	score: 6,
+	action: "reaction",
+	source: "img/djinn/nekir.png"
+});
+DjinnList.insert({
+	name: "shamhat",
+	score: 6,
+	action: "scoring",
+	source: "img/djinn/shamhat.png"
+});
+DjinnList.insert({
+	name: "sibittis",
+	score: 4,
+	action: "action",
+	source: "img/djinn/sibittis.png"
+});
+DjinnList.insert({
+	name: "sloar",
+	score: 8,
+	action: "action",
+	source: "img/djinn/sloar.png"
+});
+DjinnList.insert({
+	name: "utug",
+	score: 4,
+	action: "action",
+	source: "img/djinn/utug.png"
+});
+
+MeepleList.insert({
+	type: "vizier"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "vizier"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "vizier"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "vizier"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "vizier"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "vizier"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "vizier"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "vizier"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "vizier"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "vizier"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "vizier"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "vizier"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "vizier"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "vizier"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "vizier"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "vizier"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "merchant"
+});
+MeepleList.insert({
+	type: "assassin"
+});
+MeepleList.insert({
+	type: "builder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+MeepleList.insert({
+	type: "elder"
+});
+
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+MerchList.insert({
+	name: "slave",
+	count: 18,
+	source: "img/merch/slave.png"
+});
+
+MerchList.insert({
+	name: "grain",
+	count: 6,
+	source: "img/merch/grain.png"
+});
+MerchList.insert({
+	name: "grain",
+	count: 6,
+	source: "img/merch/grain.png"
+});
+MerchList.insert({
+	name: "grain",
+	count: 6,
+	source: "img/merch/grain.png"
+});
+MerchList.insert({
+	name: "grain",
+	count: 6,
+	source: "img/merch/grain.png"
+});
+MerchList.insert({
+	name: "grain",
+	count: 6,
+	source: "img/merch/grain.png"
+});
+MerchList.insert({
+	name: "grain",
+	count: 6,
+	source: "img/merch/grain.png"
+});
+
+MerchList.insert({
+	name: "fish",
+	count: 6,
+	source: "img/merch/fish.png"
+});
+MerchList.insert({
+	name: "fish",
+	count: 6,
+	source: "img/merch/fish.png"
+});
+MerchList.insert({
+	name: "fish",
+	count: 6,
+	source: "img/merch/fish.png"
+});
+MerchList.insert({
+	name: "fish",
+	count: 6,
+	source: "img/merch/fish.png"
+});
+MerchList.insert({
+	name: "fish",
+	count: 6,
+	source: "img/merch/fish.png"
+});
+MerchList.insert({
+	name: "fish",
+	count: 6,
+	source: "img/merch/fish.png"
+});
+
+MerchList.insert({
+	name: "pottery",
+	count: 6,
+	source: "img/merch/pot.png"
+});
+MerchList.insert({
+	name: "pottery",
+	count: 6,
+	source: "img/merch/pot.png"
+});
+MerchList.insert({
+	name: "pottery",
+	count: 6,
+	source: "img/merch/pot.png"
+});
+MerchList.insert({
+	name: "pottery",
+	count: 6,
+	source: "img/merch/pot.png"
+});
+MerchList.insert({
+	name: "pottery",
+	count: 6,
+	source: "img/merch/pot.png"
+});
+MerchList.insert({
+	name: "pottery",
+	count: 6,
+	source: "img/merch/pot.png"
+});
+
+MerchList.insert({
+	name: "silk",
+	count: 4,
+	source: "img/merch/silk.png"
+});
+MerchList.insert({
+	name: "silk",
+	count: 4,
+	source: "img/merch/silk.png"
+});
+MerchList.insert({
+	name: "silk",
+	count: 4,
+	source: "img/merch/silk.png"
+});
+MerchList.insert({
+	name: "silk",
+	count: 4,
+	source: "img/merch/silk.png"
+});
+
+MerchList.insert({
+	name: "paper",
+	count: 4,
+	source: "img/merch/paper.png"
+});
+MerchList.insert({
+	name: "paper",
+	count: 4,
+	source: "img/merch/paper.png"
+});
+MerchList.insert({
+	name: "paper",
+	count: 4,
+	source: "img/merch/paper.png"
+});
+MerchList.insert({
+	name: "paper",
+	count: 4,
+	source: "img/merch/paper.png"
+});
+
+MerchList.insert({
+	name: "spice",
+	count: 4,
+	source: "img/merch/spice.png"
+});
+MerchList.insert({
+	name: "spice",
+	count: 4,
+	source: "img/merch/spice.png"
+});
+MerchList.insert({
+	name: "spice",
+	count: 4,
+	source: "img/merch/spice.png"
+});
+MerchList.insert({
+	name: "spice",
+	count: 4,
+	source: "img/merch/spice.png"
+});
+
+MerchList.insert({
+	name: "gold",
+	count: 2,
+	source: "img/merch/gold.png"
+});
+MerchList.insert({
+	name: "gold",
+	count: 2,
+	source: "img/merch/gold.png"
+});
+
+MerchList.insert({
+	name: "ivory",
+	count: 2,
+	source: "img/merch/ivory.png"
+});
+MerchList.insert({
+	name: "ivory",
+	count: 2,
+	source: "img/merch/ivory.png"
+});
+
+MerchList.insert({
+	name: "gems",
+	count: 2,
+	source: "img/merch/gems.png"
+});
+MerchList.insert({
+	name: "gems",
+	count: 2,
+	source: "img/merch/gems.png"
+});
+
+TileList.insert({
+	name: "lmarket1",
+	type: "lmarket",
+	score: 4,
+	source: "img/tiles/lmarket1.png"
+});
+TileList.insert({
+	name: "lmarket2",
+	type: "lmarket",
+	score: 4,
+	source: "img/tiles/lmarket2.png"
+});
+TileList.insert({
+	name: "lmarket3",
+	type: "lmarket",
+	score: 4,
+	source: "img/tiles/lmarket3.png"
+});	
+TileList.insert({
+	name: "lmarket4",
+	type: "lmarket",
+	score: 4,
+	source: "img/tiles/lmarket4.png"
+});
+TileList.insert({
+	name: "oasis1",
+	type: "oasis",
+	score: 8,
+	source: "img/tiles/oasis1.png"
+});
+TileList.insert({
+	name: "oasis2",
+	type: "oasis",
+	score: 8,
+	source: "img/tiles/oasis2.png"
+});
+TileList.insert({
+	name: "oasis3",
+	type: "oasis",
+	score: 8,
+	source: "img/tiles/oasis3.png"
+});
+TileList.insert({
+	name: "oasis4",
+	type: "oasis",
+	score: 8,
+	source: "img/tiles/oasis4.png"
+});
+TileList.insert({
+	name: "oasis5",
+	type: "oasis",
+	score: 8,
+	source: "img/tiles/oasis5.png"
+});
+TileList.insert({
+	name: "oasis6",
+	type: "oasis",
+	score: 8,
+	source: "img/tiles/oasis6.png"
+});
+TileList.insert({
+	name: "sacred1",
+	type: "sacred",
+	score: 15,
+	source: "img/tiles/sacred1.png"
+});
+TileList.insert({
+	name: "sacred2",
+	type: "sacred",
+	score: 12,
+	source: "img/tiles/sacred2.png"
+});
+TileList.insert({
+	name: "sacred3",
+	type: "sacred",
+	score: 10,
+	source: "img/tiles/sacred3.png"
+});
+TileList.insert({
+	name: "sacred4",
+	type: "sacred",
+	score: 6,
+	source: "img/tiles/sacred4.png"
+});
+TileList.insert({
+	name: "sacred5",
+	type: "sacred",
+	score: 6,
+	source: "img/tiles/sacred5.png"
+});
+TileList.insert({
+	name: "sacred6",
+	type: "sacred",
+	score: 6,
+	source: "img/tiles/sacred6.png"
+});
+TileList.insert({
+	name: "sacred7",
+	type: "sacred",
+	score: 6,
+	source: "img/tiles/sacred7.png"
+});
+TileList.insert({
+	name: "smarket1",
+	type: "smarket",
+	score: 6,
+	source: "img/tiles/smarket1.png"
+});
+TileList.insert({
+	name: "smarket2",
+	type: "smarket",
+	score: 6,
+	source: "img/tiles/smarket2.png"
+});
+TileList.insert({
+	name: "smarket3",
+	type: "smarket",
+	score: 6,
+	source: "img/tiles/smarket3.png"
+});
+TileList.insert({
+	name: "smarket4",
+	type: "smarket",
+	score: 6,
+	source: "img/tiles/smarket4.png"
+});
+TileList.insert({
+	name: "smarket5",
+	type: "smarket",
+	score: 6,
+	source: "img/tiles/smarket5.png"
+});
+TileList.insert({
+	name: "smarket6",
+	type: "smarket",
+	score: 6,
+	source: "img/tiles/smarket6.png"
+});
+TileList.insert({
+	name: "smarket7",
+	type: "smarket",
+	score: 6,
+	source: "img/tiles/smarket7.png"
+});
+TileList.insert({
+	name: "smarket8",
+	type: "smarket",
+	score: 6,
+	source: "img/tiles/smarket8.png"
+});
+TileList.insert({
+	name: "village1",
+	type: "village",
+	score: 5,
+	source: "img/tiles/village1.png"
+});
+TileList.insert({
+	name: "village2",
+	type: "village",
+	score: 5,
+	source: "img/tiles/village2.png"
+});
+TileList.insert({
+	name: "village3",
+	type: "village",
+	score: 5,
+	source: "img/tiles/village3.png"
+});
+TileList.insert({
+	name: "village4",
+	type: "village",
+	score: 5,
+	source: "img/tiles/village4.png"
+});
+TileList.insert({
+	name: "village5",
+	type: "village",
+	score: 5,
+	source: "img/tiles/village5.png"
+});

@@ -38,25 +38,16 @@ a{
   flex: 0, 0;
 }
 
-.button-container h1{
-  font-family: feathergraphy-clean;
-  text-align: center;
-  margin: 5px;
-  margin-bottom: 0px;
-  border: 5px solid #222047;
-  background: #f99c4e;
-}
-
 
 
 .button {
    border-top: 1px solid #96d1f8;
    background: #7faec0;
-   background: -webkit-gradient(linear, left top, left bottom, from(#d9793d), to(#7faec0));
-   background: -webkit-linear-gradient(top, #d9793d, #7faec0);
-   background: -moz-linear-gradient(top, #d9793d, #7faec0);
-   background: -ms-linear-gradient(top, #d9793d, #7faec0);
-   background: -o-linear-gradient(top, #d9793d, #7faec0);
+   background: -webkit-gradient(linear, left top, left bottom, from(#7faec0), to(#d9793d));
+   background: -webkit-linear-gradient(top, #7faec0, #d9793d);
+   background: -moz-linear-gradient(top, #7faec0, #d9793d);
+   background: -ms-linear-gradient(top, #7faec0, #d9793d);
+   background: -o-linear-gradient(top, #7faec0, #d9793d);
    padding: 11.5px 50px;
    -webkit-border-radius: 20px;
    -moz-border-radius: 20px;
@@ -69,6 +60,8 @@ a{
    font-size: 26px;
    font-family: feathergraphy-clean;
    vertical-align: middle;
+
+   margin-bottom: 7px;
    }
 .button:hover {
    border-top-color: #7f5a7b;
