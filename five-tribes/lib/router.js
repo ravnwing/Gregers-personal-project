@@ -4,4 +4,4 @@ Router.route('/', {
 
 Router.route('/game', {
   template: "gameStart"
-})
+});

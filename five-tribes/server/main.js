@@ -22,7 +22,7 @@ Meteor.methods({
       DjinnDeck: [],
       AvailDjinn: []
     })
-    // Session.set('currentGame', gameId);
+
 
     console.log(gameId);
 
@@ -169,7 +169,7 @@ Meteor.methods({
         })
       }
     }
-
+    return gameId;
   },
 
 });
