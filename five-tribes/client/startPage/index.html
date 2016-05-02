@@ -11,13 +11,18 @@
       <div class="login-item">
         {{> loginButtons}}
       </div>
-      <!-- <a href="/game"> -->
-        <div class="newgame-button">
-          <button class="button" id="newgame-btn">New Game</button>
-        </div>
-      <!-- </a> -->
+      <div class="newgame-button">
+        <button class="button" id="newgame-btn">New Game</button>
+      </div>
       <div class="loadgame-button">
         <button class="button" id="loadgame-btn">Load Game</button>
+      </div>
+      <div class="loadgame-list">
+        <ul>
+          {{#each gameloadList}}
+            <li><div class="game_id {{selectedClass}}">{{_id}}</div></li>
+          {{/each}}
+        </ul>
       </div>
     </div>
   </div>

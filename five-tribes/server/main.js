@@ -82,8 +82,8 @@ Meteor.methods({
         GameList.update({_id: gameId}, {
           $push: {
             GameBoard: {
-              xPosition: xpos,
-              yPosition: ypos,
+              column: xpos,
+              row: ypos,
               tileId: posId,
               owner: "none",
               oasis: 0,

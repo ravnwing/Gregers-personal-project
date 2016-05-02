@@ -5,3 +5,7 @@ Router.route('/', {
 Router.route('/game', {
   template: "gameStart"
 });
+
+Router.route('/newgame',{
+  template: "newGame"
+});
