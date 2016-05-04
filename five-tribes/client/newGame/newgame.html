@@ -1,29 +1,42 @@
+<template name="gameLoad">
+  {{> newGame}}
+</template>
+
 <template name="newGame">
-  <!-- {{methodCreation}} -->
   <div class="board">
     <div class="row" id="row0">
       {{#each row0Call}}
-        <img class="tile" id="{{tileId}}" src="{{source}}">
+        <div class="tile" id="{{tileId}}">
+          <img src="{{source}}">
+        </div>
       {{/each}}
     </div>
     <div class="row" id="row1">
       {{#each row1Call}}
-        <img class="tile" id="{{tileId}}" src="{{source}}">
+        <div class="tile" id="{{tileId}}">
+          <img src="{{source}}">
+        </div>
       {{/each}}
     </div>
     <div class="row" id="row2">
       {{#each row2Call}}
-        <img class="tile" id="{{tileId}}" src="{{source}}">
+        <div class="tile" id="{{tileId}}">
+          <img src="{{source}}">
+        </div>
       {{/each}}
     </div>
     <div class="row" id="row3">
       {{#each row3Call}}
-        <img class="tile" id="{{tileId}}" src="{{source}}">
+        <div class="tile" id="{{tileId}}">
+          <img src="{{source}}">
+        </div>
       {{/each}}
     </div>
     <div class="row" id="row4">
       {{#each row4Call}}
-        <img class="tile" id="{{tileId}}" src="{{source}}">
+        <div class="tile" id="{{tileId}}">
+          <img src="{{source}}">
+        </div>
       {{/each}}
     </div>
   </div>
