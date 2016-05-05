@@ -49,36 +49,36 @@ Meteor.methods({
       if (rand != 1) {
         drawnItem = tempDeck[rand];
         tempDeck.splice(rand, 1);
-        var assassins = 0;
-        var builders = 0;
-        var elders = 0;
-        var merchants = 0;
-        var viziers = 0;
+        var assassins = false;
+        var builders = false;
+        var elders = false;
+        var merchants = false;
+        var viziers = false;
         var tileMeeple = [];
 
         for (var i = 0; i < 3; i++) {
           var pulledMeeple = meepleBag.pop();
           tileMeeple.push(pulledMeeple);
-          // switch (pulledMeeple) {
-          //   case "assassin":
-          //     assassins++;
-          //     break;
-          //   case "builder":
-          //     builders++;
-          //     break;
-          //   case "elder":
-          //     elders++;
-          //     break;
-          //   case "merchant":
-          //     merchants++;
-          //     break;
-          //   case "vizier":
-          //     viziers++;
-          //     break;
-          //   default:
-          //     console.log(pulledMeeple);
-          //     console.log("Meeple draw error");
-          // }
+          switch (pulledMeeple) {
+            case "assassin":
+              assassins = true;
+              break;
+            case "builder":
+              builders = true;
+              break;
+            case "elder":
+              elders = true;
+              break;
+            case "merchant":
+              merchants = true;
+              break;
+            case "vizier":
+              viziers = true;
+              break;
+            default:
+              console.log(pulledMeeple);
+              console.log("Meeple draw error");
+          }
         }
 
         GameList.update({_id: gameId}, {
@@ -90,11 +90,11 @@ Meteor.methods({
               owner: "none",
               oasis: 0,
               palace: 0,
-              // m_assassin: assassins,
-              // m_builder: builders,
-              // m_merchant: merchants,
-              // m_vizier: viziers,
-              // m_elder: elders,
+              m_assassin: assassins,
+              m_builder: builders,
+              m_merchant: merchants,
+              m_vizier: viziers,
+              m_elder: elders,
               meeple: tileMeeple,
               score: drawnItem.score,
               type: drawnItem.type,

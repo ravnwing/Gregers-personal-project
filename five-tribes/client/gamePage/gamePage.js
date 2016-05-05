@@ -1,7 +1,9 @@
 Template.gameLoad.onCreated(function(){
   Meteor.subscribe("gameLoad");
 })
-
+Template.gameLoad.onRendered(function(){
+  $(".pileInHand").hide();
+})
 Template.gameLoad.helpers({
   // Irrelevant with effective new Game button
   // "methodCreation": function(){
@@ -31,11 +33,40 @@ Template.gameLoad.helpers({
     return GameList.find({_id:selectedGameId}, {GameBoard: 1}).fetch().map(function(x){return x.GameBoard.slice(24,30);})[0]
   },
 
+  "showMeeple": function(){
+    var selectedGameId = Session.get("selectedGame");
+    var boardArray = GameList.find({_id:selectedGameId}, {GameBoard: 1}).fetch().map(function(x){return x.GameBoard;})[0];
+    for(i in boardArray){
+      if (boardArray[i].m_assassin){
+        var identifier = String("#" + boardArray[i].tileId + " .assassin");
+        $(identifier).show();
+      }
+      if (boardArray[i].m_builder){
+        var identifier = String("#" + boardArray[i].tileId + " .builder");
+        $(identifier).show();
+      }
+      if (boardArray[i].m_elder){
+        var identifier = String("#" + boardArray[i].tileId + " .elder");
+        $(identifier).show();
+      }
+      if (boardArray[i].m_merchant){
+        var identifier = String("#" + boardArray[i].tileId + " .merchant");
+        $(identifier).show();
+      }
+      if (boardArray[i].m_vizier){
+        var identifier = String("#" + boardArray[i].tileId + " .viz");
+        $(identifier).show();
+      }
+    }
+
+  }
+
 });
 
 Template.gameLoad.events({
   "click .tile": function(){
      var tilename = this.tileId;
      console.log(tilename);
+     $(".pileInHand").slideDown();
   }
 });

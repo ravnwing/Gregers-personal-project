@@ -2,6 +2,10 @@ Router.route('/', {
   template: "startPage"
 });
 
+Router.route('/test',{
+  template: "cssTest"
+});
+
 Router.route('/game/:_id', function(){
   this.render('gameLoad', {
     data: function(){

@@ -1,0 +1,18 @@
+.pileInHand{
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: space-around;
+
+  bottom: 0px;
+  background-color: black;
+  height:100px;
+  width: 70%;
+  z-index: 5;
+}
+
+.pileInHand img{
+  flex: 0, 0;
+  width: 100px;
+  z-index: 6
+}
