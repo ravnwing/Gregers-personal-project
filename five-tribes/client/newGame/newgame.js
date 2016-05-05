@@ -1,8 +1,8 @@
-Template.newGame.onCreated(function onStartPage(){
+Template.gameLoad.onCreated(function(){
   Meteor.subscribe("gameLoad");
-
 })
-Template.newGame.helpers({
+
+Template.gameLoad.helpers({
   // Irrelevant with effective new Game button
   // "methodCreation": function(){
   //   Meteor.call("createCollection", "pull", function(error, result){
@@ -33,9 +33,9 @@ Template.newGame.helpers({
 
 });
 
-Template.newGame.events({
+Template.gameLoad.events({
   "click .tile": function(){
-     var tilename = this.score;
+     var tilename = this.tileId;
      console.log(tilename);
   }
 });

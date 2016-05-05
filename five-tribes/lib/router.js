@@ -3,7 +3,7 @@ Router.route('/', {
 });
 
 Router.route('/game/:_id', function(){
-  this.render('newGame', {
+  this.render('gameLoad', {
     data: function(){
       var currentGame = this.params._id;
       Session.set("selectedGame", currentGame);

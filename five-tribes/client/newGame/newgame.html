@@ -1,42 +1,28 @@
 <template name="gameLoad">
-  {{> newGame}}
-</template>
-
-<template name="newGame">
   <div class="board">
     <div class="row" id="row0">
       {{#each row0Call}}
-        <div class="tile" id="{{tileId}}">
-          <img src="{{source}}">
-        </div>
+        {{>tile}}
       {{/each}}
     </div>
     <div class="row" id="row1">
       {{#each row1Call}}
-        <div class="tile" id="{{tileId}}">
-          <img src="{{source}}">
-        </div>
+        {{>tile}}
       {{/each}}
     </div>
     <div class="row" id="row2">
       {{#each row2Call}}
-        <div class="tile" id="{{tileId}}">
-          <img src="{{source}}">
-        </div>
+        {{>tile}}
       {{/each}}
     </div>
     <div class="row" id="row3">
       {{#each row3Call}}
-        <div class="tile" id="{{tileId}}">
-          <img src="{{source}}">
-        </div>
+        {{>tile}}
       {{/each}}
     </div>
     <div class="row" id="row4">
       {{#each row4Call}}
-        <div class="tile" id="{{tileId}}">
-          <img src="{{source}}">
-        </div>
+        {{>tile}}
       {{/each}}
     </div>
   </div>

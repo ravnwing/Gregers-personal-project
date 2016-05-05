@@ -54,29 +54,31 @@ Meteor.methods({
         var elders = 0;
         var merchants = 0;
         var viziers = 0;
+        var tileMeeple = [];
 
         for (var i = 0; i < 3; i++) {
           var pulledMeeple = meepleBag.pop();
-          switch (pulledMeeple) {
-            case "assassin":
-              assassins++;
-              break;
-            case "builder":
-              builders++;
-              break;
-            case "elder":
-              elders++;
-              break;
-            case "merchant":
-              merchants++;
-              break;
-            case "vizier":
-              viziers++;
-              break;
-            default:
-              console.log(pulledMeeple);
-              console.log("Meeple draw error");
-          }
+          tileMeeple.push(pulledMeeple);
+          // switch (pulledMeeple) {
+          //   case "assassin":
+          //     assassins++;
+          //     break;
+          //   case "builder":
+          //     builders++;
+          //     break;
+          //   case "elder":
+          //     elders++;
+          //     break;
+          //   case "merchant":
+          //     merchants++;
+          //     break;
+          //   case "vizier":
+          //     viziers++;
+          //     break;
+          //   default:
+          //     console.log(pulledMeeple);
+          //     console.log("Meeple draw error");
+          // }
         }
 
         GameList.update({_id: gameId}, {
@@ -88,11 +90,12 @@ Meteor.methods({
               owner: "none",
               oasis: 0,
               palace: 0,
-              m_assassin: assassins,
-              m_builder: builders,
-              m_merchant: merchants,
-              m_vizier: viziers,
-              m_elder: elders,
+              // m_assassin: assassins,
+              // m_builder: builders,
+              // m_merchant: merchants,
+              // m_vizier: viziers,
+              // m_elder: elders,
+              meeple: tileMeeple,
               score: drawnItem.score,
               type: drawnItem.type,
               source: drawnItem.source
