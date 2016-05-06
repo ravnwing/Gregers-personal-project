@@ -3,6 +3,8 @@ Template.gameLoad.onCreated(function(){
 })
 Template.gameLoad.onRendered(function(){
   $("#pileInHand").hide();
+
+
 })
 Template.gameLoad.helpers({
   // Irrelevant with effective new Game button
@@ -66,26 +68,40 @@ Template.gameLoad.helpers({
 Template.gameLoad.events({
   "click .tile": function(){
      var tilename = this.tileId;
+
+     Session.set("startTile", tilename);
      console.log(tilename);
      var meepleOnTile = this.meeple;
-     var inHand;
-     for(i in meepleOnTile){
-       if (inHand == undefined){
-         inHand = String("<img class = 'heldMeeple' id='" + meepleOnTile[i] + "' src = '../img/meeple/" + meepleOnTile[i] + ".png'>")
-       }
-       else{
-         inHand = String(inHand + "<img class = 'heldMeeple' id='" + meepleOnTile[i] + "' src = '../img/meeple/" + meepleOnTile[i] + ".png'>")
-       }
-     }
 
-     $("#pileInHand").html(inHand);
-     console.log(inHand);
+     $("#pileInHand").html("");
+     for(i in meepleOnTile){
+       $("<img class = 'heldMeeple' id='inHand" + i + "' src = '../img/meeple/" + meepleOnTile[i] + ".png'>").data('type', meepleOnTile[i]).appendTo("#pileInHand").draggable({
+         containment: ".board",
+         stack: ".heldMeeple img",
+         revert:   true
+       });
+     }
      $("#pileInHand").slideDown();
+
+
   },
 
-  
+  "mouseover .tile": function(){
 
-  // "click": function(){
-  //   $("#pileInHand").slideUp();
-  // }
+
+  }
+
 });
+
+Template.tile.rendered = function(){
+  $(".tile").droppable({
+    accept: ".heldMeeple img",
+    drop: function(event, ui){
+      var tilename = $(this).tileId;
+      console.log(tilename);
+
+      ui.draggable.draggable('option', 'revert', false);
+      ui.draggable.draggable( 'disable' );
+    }
+  });
+}

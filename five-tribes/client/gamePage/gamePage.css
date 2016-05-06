@@ -107,6 +107,10 @@ body{
   background-color: white;
 }
 
+.selected{
+  box-shadow: 5px 5px 5px #000000;
+}
+
 .merch img{
   height: 175px;
 }
