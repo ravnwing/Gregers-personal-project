@@ -1,19 +1,16 @@
 <template name="tile">
   <div class="tile hvr-glow" id="{{tileId}}">
-    <img src="../{{source}}">
-    <img class="assassin" src="../img/meeple/assassin.png">
-  	<img class="merchant" src="../img/meeple/merchant.png">
-  	<img class="elder" src="../img/meeple/elder.png">
-  	<img class="builder" src="../img/meeple/builder.png">
-  	<img class="viz" src="../img/meeple/vizier.png">
+    <img src="../{{source}}" />
+    <div class="assassin"></div>
+  	<div class="merchant"></div>
+  	<div class="elder"></div>
+  	<div class="builder"></div>
+  	<div class="viz"></div>
   	<span class="counter">{{meeple.length}}</span>
   </div>
 </template>
 
 <template name="meepleBox">
-  <div class="pileInHand">
-    <img src="../img/meeple/merchant.png">
-  	<img src="../img/meeple/elder.png">
-  	<img src="../img/meeple/builder.png">
+  <div id="pileInHand">
   </div>
 </template>

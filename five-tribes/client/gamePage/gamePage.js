@@ -2,7 +2,7 @@ Template.gameLoad.onCreated(function(){
   Meteor.subscribe("gameLoad");
 })
 Template.gameLoad.onRendered(function(){
-  $(".pileInHand").hide();
+  $("#pileInHand").hide();
 })
 Template.gameLoad.helpers({
   // Irrelevant with effective new Game button
@@ -67,6 +67,25 @@ Template.gameLoad.events({
   "click .tile": function(){
      var tilename = this.tileId;
      console.log(tilename);
-     $(".pileInHand").slideDown();
-  }
+     var meepleOnTile = this.meeple;
+     var inHand;
+     for(i in meepleOnTile){
+       if (inHand == undefined){
+         inHand = String("<img class = 'heldMeeple' id='" + meepleOnTile[i] + "' src = '../img/meeple/" + meepleOnTile[i] + ".png'>")
+       }
+       else{
+         inHand = String(inHand + "<img class = 'heldMeeple' id='" + meepleOnTile[i] + "' src = '../img/meeple/" + meepleOnTile[i] + ".png'>")
+       }
+     }
+
+     $("#pileInHand").html(inHand);
+     console.log(inHand);
+     $("#pileInHand").slideDown();
+  },
+
+  
+
+  // "click": function(){
+  //   $("#pileInHand").slideUp();
+  // }
 });
