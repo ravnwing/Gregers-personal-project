@@ -175,4 +175,29 @@ Meteor.methods({
     return gameId;
   },
 
+  "pushMeeple": function(game, tile, type){
+    GameList.update({_id: game, "GameBoard.tileId": tile},
+                      {$push: {"GameBoard.$.meeple": type}});
+    switch (type) {
+      case "assassin":
+        GameList.update({_id: game, "GameBoard.tileId": tile}, {$set: {"Gameboard.$.m_assassin": true}});
+        break;
+      case "builder":
+        GameList.update({_id: game, "GameBoard.tileId": tile}, {$set: {"Gameboard.$.m_builder": true}});
+        break;
+      case "elder":
+        GameList.update({_id: game, "GameBoard.tileId": tile}, {$set: {"Gameboard.m_elder": true}});
+        break;
+      case "merchant":
+        GameList.update({_id: game, "GameBoard.tileId": tile}, {$set: {"Gameboard.$.m_merhant": true}});
+        break;
+      case "vizier":
+        GameList.update({_id: game, "GameBoard.tileId": tile}, {$set: {"Gameboard.$.m_vizier": true}});
+        break;
+      default:
+        console.log(pulledMeeple);
+        console.log("Meeple drop error");
+      }
+  }
+
 });

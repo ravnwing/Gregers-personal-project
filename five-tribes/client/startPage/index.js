@@ -13,7 +13,7 @@ Template.startPage.events({
   },
 
   "click #newgame-btn": function(){
-    Meteor.call("createCollection", "pull", function(error, result){
+    Meteor.call("createCollection", function(error, result){
       Session.set("selectedGame", result);
     });
     setTimeout(function(){

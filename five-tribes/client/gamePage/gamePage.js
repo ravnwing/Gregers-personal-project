@@ -1,11 +1,11 @@
 Template.gameLoad.onCreated(function(){
   Meteor.subscribe("gameLoad");
 })
+
 Template.gameLoad.onRendered(function(){
   $("#pileInHand").hide();
-
-
 })
+
 Template.gameLoad.helpers({
   // Irrelevant with effective new Game button
   // "methodCreation": function(){
@@ -60,8 +60,7 @@ Template.gameLoad.helpers({
         $(identifier).show();
       }
     }
-
-  }
+  },
 
 });
 
@@ -70,7 +69,6 @@ Template.gameLoad.events({
      var tilename = this.tileId;
 
      Session.set("startTile", tilename);
-     console.log(tilename);
      var meepleOnTile = this.meeple;
 
      $("#pileInHand").html("");
@@ -86,22 +84,19 @@ Template.gameLoad.events({
 
   },
 
-  "mouseover .tile": function(){
-
-
-  }
-
 });
 
-Template.tile.rendered = function(){
+Template.tile.onRendered(function(){
   $(".tile").droppable({
-    accept: ".heldMeeple img",
-    drop: function(event, ui){
-      var tilename = $(this).tileId;
-      console.log(tilename);
-
-      ui.draggable.draggable('option', 'revert', false);
-      ui.draggable.draggable( 'disable' );
+    accept: '.heldMeeple',
+    drop: function (event, ui) {
+      var selectedGameId = Session.get("selectedGame");
+      var dropTile = this.id;
+      var droppedMeeple = ui.draggable.data('type');
+      // ui.draggable.remove().html();
+      ui.draggable.draggable( 'option', 'revert', false );
+      console.log(dropTile);
+      Meteor.call("pushMeeple", selectedGameId, dropTile, droppedMeeple, function(error, result){});
     }
   });
-}
+})
