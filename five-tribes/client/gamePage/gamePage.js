@@ -56,7 +56,7 @@ Template.gameLoad.helpers({
         $(identifier).show();
       }
       if (boardArray[i].m_vizier){
-        var identifier = String("#" + boardArray[i].tileId + " .viz");
+        var identifier = String("#" + boardArray[i].tileId + " .vizier");
         $(identifier).show();
       }
     }
@@ -66,23 +66,54 @@ Template.gameLoad.helpers({
 
 Template.gameLoad.events({
   "click .tile": function(){
-     var tilename = this.tileId;
+    var lasttile = Session.get("startTile");
+    var draggingMeeple = false;
+    draggingMeeple = Session.get("dragging");
+    console.log(draggingMeeple);
+    if(!draggingMeeple){
+      if(lasttile){
+        if(lasttile.m_assassin){
+          $("#"+ lasttile.tileId + " .assassin").show()
+        }
+        if(lasttile.m_builder){
+          $("#"+ lasttile.tileId + " .builder").show()
+        }
+        if(lasttile.m_elder){
+          $("#"+ lasttile.tileId + " .elder").show()
+        }
+        if(lasttile.m_merchant){
+          $("#"+ lasttile.tileId + " .merchant").show()
+        }
+        if(lasttile.m_vizier){
+          $("#"+ lasttile.tileId + " .vizier").show()
+        }
+      }
 
-     Session.set("startTile", tilename);
-     var meepleOnTile = this.meeple;
+      var lilarray = this.meeple;
+      console.log(lilarray.length);
+       var tilename = this.tileId;
+       Session.set("startTile", this);
+       var meepleOnTile = this.meeple;
 
-     $("#pileInHand").html("");
-     for(i in meepleOnTile){
-       $("<img class = 'heldMeeple' id='inHand" + i + "' src = '../img/meeple/" + meepleOnTile[i] + ".png'>").data('type', meepleOnTile[i]).appendTo("#pileInHand").draggable({
-         containment: ".board",
-         stack: ".heldMeeple img",
-         revert:   true
-       });
-     }
-     $("#pileInHand").slideDown();
-
-
-  },
+       $("#pileInHand").html("");
+       for(i in meepleOnTile){
+         $("<img class = 'heldMeeple' id='inHand" + i + "' src = '../img/meeple/" + meepleOnTile[i] + ".png'>").data('type', meepleOnTile[i]).appendTo("#pileInHand").draggable({
+           containment: ".board",
+           stack: ".heldMeeple img",
+           revert:   true,
+           drag: function(event, ui){
+             var draggingMeeple = true;
+             Session.set("dragging", draggingMeeple);
+           }
+         });
+       }
+       $("#pileInHand").slideDown();
+       $("#" + tilename + " .assassin").hide();
+       $("#" + tilename + " .builder").hide();
+       $("#" + tilename + " .elder").hide();
+       $("#" + tilename + " .merchant").hide();
+       $("#" + tilename + " .vizier").hide();
+  }},
 
 });
 
@@ -93,10 +124,11 @@ Template.tile.onRendered(function(){
       var selectedGameId = Session.get("selectedGame");
       var dropTile = this.id;
       var droppedMeeple = ui.draggable.data('type');
-      // ui.draggable.remove().html();
-      ui.draggable.draggable( 'option', 'revert', false );
-      console.log(dropTile);
+      // ui.draggable.draggable( 'option', 'revert', false );
       Meteor.call("pushMeeple", selectedGameId, dropTile, droppedMeeple, function(error, result){});
+      var identifier = String("#" + dropTile + " ." + droppedMeeple);
+      $(identifier).show()
+      ui.draggable.remove().html();
     }
   });
 })
