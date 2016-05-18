@@ -40,6 +40,7 @@ Meteor.methods({
     var drawnItem;
     xpos = 0;
     ypos = 0;
+    counter = 0;
     while (tempDeck.length != 0){
       var rand = Math.floor(Math.random()*tempDeck.length);
       var posId = String("tile_" + xpos + "_" + ypos);
@@ -81,6 +82,7 @@ Meteor.methods({
         GameList.update({_id: gameId}, {
           $push: {
             GameBoard: {
+              _id: counter,
               column: xpos,
               row: ypos,
               tileId: posId,
@@ -100,6 +102,7 @@ Meteor.methods({
           }
         })
 
+        counter++;
 
         if (xpos == 5){
           xpos = 0;
@@ -175,28 +178,47 @@ Meteor.methods({
   "pushMeeple": function(game, tile, type){
     // This works, it just messes up collections for now
     //
-    // GameList.update({_id: game, "GameBoard.tileId": tile},
-    //                   {$push: {"GameBoard.$.meeple": type}});
+    GameList.update({_id: game}, {$push: {["GameBoard." + tile + ".meeple"]: type}});
     switch (type) {
       case "assassin":
-        GameList.update({_id: game, "GameBoard.tileId": tile}, {$set: {"Gameboard.$.m_assassin": true}});
+        GameList.update({_id: game}, {$set: {["GameBoard." + tile + ".m_assassin"]: true}});
         break;
       case "builder":
-        GameList.update({_id: game, "GameBoard.tileId": tile}, {$set: {"Gameboard.$.m_builder": true}});
+        GameList.update({_id: game}, {$set: {["GameBoard." + tile + ".m_builder"]: true}});
         break;
       case "elder":
-        GameList.update({_id: game, "GameBoard.tileId": tile}, {$set: {"Gameboard.$.m_elder": true}});
+        GameList.update({_id: game}, {$set: {["GameBoard." + tile + ".m_elder"]: true}});
         break;
       case "merchant":
-        GameList.update({_id: game, "GameBoard.tileId": tile}, {$set: {"Gameboard.$.m_merchant": true}});
+        GameList.update({_id: game}, {$set: {["GameBoard." + tile + ".m_merchant"]: true}});
         break;
       case "vizier":
-        GameList.update({_id: game, "GameBoard.tileId": tile}, {$set: {"Gameboard.$.m_vizier": true}});
+        GameList.update({_id: game}, {$set: {["GameBoard." + tile + ".m_vizier"]: true}});
         break;
       default:
         console.log(pulledMeeple);
         console.log("Meeple drop error");
       }
+  },
+
+  "dropMeeple": function(game, tile, type){
+    var pullTile = GameList.find({_id:game}).fetch().map(function(x){return x.GameBoard.slice(tile, tile+1);})[0];
+    var hand = pullTile[0].meeple;
+    for (i in hand){
+      if(hand[i] == type){
+        hand.splice(i, 1);
+        break;
+      }
+    }
+    console.log(hand);
+    GameList.update({_id: game}, {$set: {
+      ["GameBoard." + tile + ".meeple"]: hand,
+      // ["GameBoard." + tile + ".m_assassin"]: false,
+      // ["GameBoard." + tile + ".m_builder"]: false,
+      // ["GameBoard." + tile + ".m_elder"]: false,
+      // ["GameBoard." + tile + ".m_merchant"]: false,
+      // ["GameBoard." + tile + ".m_vizier"]: false
+    }});
   }
 
 });

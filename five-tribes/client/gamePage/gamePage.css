@@ -99,12 +99,15 @@ body{
 
 .counter{
   position:relative;
-	height: 20%;
-	width: 20%;
-	top: 25%;
-	left: 26%;
+  height: 10%;
+  width: 10%;
+	top: 24%;
+	left: 23%;
   font-weight: bold;
   background-color: white;
+  text-align: center;
+  padding-bottom: 3px;
+
 }
 
 .selected{

@@ -7,13 +7,6 @@ Template.gameLoad.onRendered(function(){
 })
 
 Template.gameLoad.helpers({
-  // Irrelevant with effective new Game button
-  // "methodCreation": function(){
-  //   Meteor.call("createCollection", "pull", function(error, result){
-  //     Session.set("selectedGame", result);
-  //   });
-  // },
-
   "row0Call": function(){
     var selectedGameId = Session.get("selectedGame");
     return GameList.find({_id:selectedGameId}, {GameBoard: 1}).fetch().map(function(x){return x.GameBoard.slice(0,6);})[0]
@@ -39,6 +32,7 @@ Template.gameLoad.helpers({
     var selectedGameId = Session.get("selectedGame");
     var boardArray = GameList.find({_id:selectedGameId}, {GameBoard: 1}).fetch().map(function(x){return x.GameBoard;})[0];
     for(i in boardArray){
+      $("#" + boardArray[i].tileId).data('arrayplace', boardArray[i]._id);
       if (boardArray[i].m_assassin){
         var identifier = String("#" + boardArray[i].tileId + " .assassin");
         $(identifier).show();
@@ -69,7 +63,6 @@ Template.gameLoad.events({
     var lasttile = Session.get("startTile");
     var draggingMeeple = false;
     draggingMeeple = Session.get("dragging");
-    console.log(draggingMeeple);
     if(!draggingMeeple){
       if(lasttile){
         if(lasttile.m_assassin){
@@ -89,23 +82,23 @@ Template.gameLoad.events({
         }
       }
 
-      var lilarray = this.meeple;
-      console.log(lilarray.length);
-       var tilename = this.tileId;
-       Session.set("startTile", this);
-       var meepleOnTile = this.meeple;
+      var draggingLength = this.meeple.length;
+      Session.set("dragCount", draggingLength);
+      var tilename = this.tileId;
+      Session.set("startTile", this);
+      var meepleOnTile = this.meeple;
 
-       $("#pileInHand").html("");
-       for(i in meepleOnTile){
-         $("<img class = 'heldMeeple' id='inHand" + i + "' src = '../img/meeple/" + meepleOnTile[i] + ".png'>").data('type', meepleOnTile[i]).appendTo("#pileInHand").draggable({
-           containment: ".board",
-           stack: ".heldMeeple img",
-           revert:   true,
-           drag: function(event, ui){
-             var draggingMeeple = true;
-             Session.set("dragging", draggingMeeple);
-           }
-         });
+      $("#pileInHand").html("");
+      for(i in meepleOnTile){
+        $("<img class = 'heldMeeple' id='inHand" + i + "' src = '../img/meeple/" + meepleOnTile[i] + ".png'>").data('type', meepleOnTile[i]).appendTo("#pileInHand").draggable({
+          containment: ".board",
+          stack: ".heldMeeple img",
+          revert:   true,
+          drag: function(event, ui){
+            var draggingMeeple = true;
+            Session.set("dragging", draggingMeeple);
+          }
+        });
        }
        $("#pileInHand").slideDown();
        $("#" + tilename + " .assassin").hide();
@@ -122,13 +115,24 @@ Template.tile.onRendered(function(){
     accept: '.heldMeeple',
     drop: function (event, ui) {
       var selectedGameId = Session.get("selectedGame");
+      var firsttile = Session.get("startTile");
+      var firstId = firsttile._id;
       var dropTile = this.id;
       var droppedMeeple = ui.draggable.data('type');
-      // ui.draggable.draggable( 'option', 'revert', false );
-      Meteor.call("pushMeeple", selectedGameId, dropTile, droppedMeeple, function(error, result){});
+      var thisId = $(this).data('arrayplace');
+      Meteor.call("pushMeeple", selectedGameId, thisId, droppedMeeple, function(error, result){});
       var identifier = String("#" + dropTile + " ." + droppedMeeple);
       $(identifier).show()
       ui.draggable.remove().html();
+      Meteor.call("dropMeeple", selectedGameId, firstId, droppedMeeple);
+      var draggingLength = Session.get("dragCount")
+      draggingLength--;
+      if (draggingLength == 0){
+        Session.set("dragging", false);
+      }
+      else{
+        Session.set("dragCount", draggingLength)
+      }
     }
   });
 })
