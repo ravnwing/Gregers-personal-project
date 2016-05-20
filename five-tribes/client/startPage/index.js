@@ -1,7 +1,9 @@
-
-
 Template.startPage.onCreated(function onStartPage(){
   Meteor.subscribe("gameByUser");
+})
+
+Template.startPage.onRendered(function(){
+  $(".loadgame-list").hide();
 })
 
 
@@ -24,9 +26,10 @@ Template.startPage.events({
   },
 
   "click #loadgame-btn": function(){
-    var selectedGameId = Session.get('selectedGame');
-    var gameURL = "/game/" + selectedGameId;
-    window.open(gameURL, "_self");
+    // var selectedGameId = Session.get('selectedGame');
+    // var gameURL = "/game/" + selectedGameId;
+    // window.open(gameURL, "_self");
+    $(".loadgame-list").slideDown();
   }
 });
 
@@ -35,12 +38,12 @@ Template.startPage.helpers({
     var currentuser = Meteor.userId();
     return GameList.find();
   },
-  "selectedClass": function(){
-    var gameId = this._id;
-    var selectedGameId = Session.get('selectedGame');
-    if (gameId == selectedGameId){
-      return "selected";
-    }
-  },
+  // "selectedClass": function(){
+  //   var gameId = this._id;
+  //   var selectedGameId = Session.get('selectedGame');
+  //   if (gameId == selectedGameId){
+  //     return "selected";
+  //   }
+  // },
 
 })

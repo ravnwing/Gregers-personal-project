@@ -1,6 +1,7 @@
 <head>
   <title>Five Tribes</title>
   <link href="http://localhost:3000/Hover-master/css/hover.css" rel="stylesheet" media="all">
+  <link rel="shortcut icon" href="/img/icons/favicon.ico">
 </head>
 
 <template name ="startPage">
@@ -21,7 +22,9 @@
       <div class="loadgame-list">
         <ul>
           {{#each gameloadList}}
-            <li><div class="game_id {{selectedClass}}">{{_id}}</div></li>
+            <li><div class="game_id {{selectedClass}}">
+              <a href="/game/{{_id}}">{{_id}}</a>
+            </div></li>
           {{/each}}
         </ul>
       </div>

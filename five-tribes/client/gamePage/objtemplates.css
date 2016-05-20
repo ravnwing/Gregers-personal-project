@@ -5,7 +5,9 @@
   justify-content: space-around;
 
   bottom: 0px;
-  background-color: black;
+  background-image: url("../img/scroll2.png");
+  background-repeat: no-repeat;
+  background-size: 925px 100px;
   height:100px;
   width: 925px;
   z-index: 5;
@@ -13,6 +15,8 @@
 
 #pileInHand img{
   flex: 0, 0;
-  width: 100px;
+  height: 75px;
+  width: 75px;
+  margin-top: 10px;
   z-index: 6
 }

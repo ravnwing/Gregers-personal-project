@@ -176,8 +176,6 @@ Meteor.methods({
   },
 
   "pushMeeple": function(game, tile, type){
-    // This works, it just messes up collections for now
-    //
     GameList.update({_id: game}, {$push: {["GameBoard." + tile + ".meeple"]: type}});
     switch (type) {
       case "assassin":
@@ -204,21 +202,43 @@ Meteor.methods({
   "dropMeeple": function(game, tile, type){
     var pullTile = GameList.find({_id:game}).fetch().map(function(x){return x.GameBoard.slice(tile, tile+1);})[0];
     var hand = pullTile[0].meeple;
+    var repeat = 0;
     for (i in hand){
-      if(hand[i] == type){
+      if(hand[i] == type && repeat == 0){
         hand.splice(i, 1);
+        repeat = 1;
+      }
+      else if (hand[i] == type && repeat == 1) {
+        repeat = 2;
         break;
       }
     }
-    console.log(hand);
+    if (repeat == 1){
+      GameList.update({_id: game}, {$set: {
+        ["GameBoard." + tile + ".m_" + type]: false
+      }})
+    }
     GameList.update({_id: game}, {$set: {
-      ["GameBoard." + tile + ".meeple"]: hand,
-      // ["GameBoard." + tile + ".m_assassin"]: false,
-      // ["GameBoard." + tile + ".m_builder"]: false,
-      // ["GameBoard." + tile + ".m_elder"]: false,
-      // ["GameBoard." + tile + ".m_merchant"]: false,
-      // ["GameBoard." + tile + ".m_vizier"]: false
+      ["GameBoard." + tile + ".meeple"]: hand
     }});
+  },
+
+"lastDrop": function(game, tile, type, meeple){
+  switch (type){
+    case "oasis":
+    GameList.update({_id: game}, {$inc: {
+      ["GameBoard." + tile + ".oasis"]: 1
+    }});
+    break;
+    case "village":
+    GameList.update({_id: game}, {$inc: {
+      ["GameBoard." + tile + ".palace"]: 1
+    }});
+    break;
   }
+  // switch (meeple){
+  //
+  // }
+}
 
 });

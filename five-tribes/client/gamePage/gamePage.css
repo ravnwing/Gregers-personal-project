@@ -107,11 +107,30 @@ body{
   background-color: white;
   text-align: center;
   padding-bottom: 3px;
-
 }
 
-.selected{
-  box-shadow: 5px 5px 5px #000000;
+.oasis{
+  display: none;
+	position: absolute;
+	top: 66.5%;
+	left:49.5%;
+  background-image: url("../img/meeple/palm.png");
+  min-width: 27px;
+  min-height: 43px;
+  background-size: 27px 43px;
+  background-repeat: no-repeat;
+}
+
+.palace{
+  display: none;
+	position: absolute;
+	top: 36.5%;
+	left:72.5%;
+  background-image: url("../img/meeple/palace.png");
+  min-width: 30px;
+  min-height: 36px;
+  background-size: 30px 36px;
+  background-repeat: no-repeat;
 }
 
 .merch img{
