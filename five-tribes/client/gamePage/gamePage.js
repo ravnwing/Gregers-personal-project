@@ -5,7 +5,10 @@ Template.gameLoad.onCreated(function(){
 Template.gameLoad.onRendered(function(){
   $("#pileInHand").hide();
   var selectedGameId = Session.get("selectedGame");
+  setTimeout(function(){
   var boardArray = GameList.find({_id:selectedGameId}, {GameBoard: 1}).fetch().map(function(x){return x.GameBoard;})[0];
+
+     console.log(boardArray);
   for(i in boardArray){
     $("#" + boardArray[i].tileId).data('arrayplace', boardArray[i]._id);
     if (boardArray[i].m_assassin){
@@ -37,6 +40,7 @@ Template.gameLoad.onRendered(function(){
       $(identifier).show();
     }
   }
+}, 750);
 
 
 })
@@ -95,8 +99,24 @@ Template.gameLoad.helpers({
         $(identifier).show();
       }
     }
+  },
 
-}
+  "market0Call": function(){
+    var selectedGameId = Session.get("selectedGame");
+    return GameList.find({_id: selectedGameId}).fetch().map(function(x){
+      return x.Marketplace.slice(0,3);})[0]
+  },
+  "market1Call": function(){
+    var selectedGameId = Session.get("selectedGame");
+    return GameList.find({_id: selectedGameId}).fetch().map(function(x){
+      return x.Marketplace.slice(3,6);})[0]
+  },
+  "market2Call": function(){
+    var selectedGameId = Session.get("selectedGame");
+    return GameList.find({_id: selectedGameId}).fetch().map(function(x){
+      return x.Marketplace.slice(6,9);})[0]
+  },
+
 });
 
 Template.gameLoad.events({

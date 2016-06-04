@@ -8,12 +8,6 @@ Template.startPage.onRendered(function(){
 
 
 Template.startPage.events({
-  "click .game_id": function(){
-    var gameId = this._id;
-    Session.set('selectedGame', gameId);
-    var selectedGameId = Session.get('selectedGame');
-  },
-
   "click #newgame-btn": function(){
     Meteor.call("createCollection", function(error, result){
       Session.set("selectedGame", result);
@@ -26,9 +20,6 @@ Template.startPage.events({
   },
 
   "click #loadgame-btn": function(){
-    // var selectedGameId = Session.get('selectedGame');
-    // var gameURL = "/game/" + selectedGameId;
-    // window.open(gameURL, "_self");
     $(".loadgame-list").slideDown();
   }
 });

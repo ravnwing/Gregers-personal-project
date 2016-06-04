@@ -1,30 +1,52 @@
 <template name="gameLoad">
-  <!-- <img id = "testimg" src="../img/meeple/elder.png"> -->
-  <div class="board">
-    <div class="row" id="row0">
-      {{#each row0Call}}
-        {{>tile}}
-      {{/each}}
+  <div class="table">
+    <div class="board">
+      <div class="row" id="row0">
+        {{#each row0Call}}
+          {{>tile}}
+        {{/each}}
+      </div>
+      <div class="row" id="row1">
+        {{#each row1Call}}
+          {{>tile}}
+        {{/each}}
+      </div>
+      <div class="row" id="row2">
+        {{#each row2Call}}
+          {{>tile}}
+        {{/each}}
+      </div>
+      <div class="row" id="row3">
+        {{#each row3Call}}
+          {{>tile}}
+        {{/each}}
+      </div>
+      <div class="row" id="row4">
+        {{#each row4Call}}
+          {{>tile}}
+        {{/each}}
+      </div>
     </div>
-    <div class="row" id="row1">
-      {{#each row1Call}}
-        {{>tile}}
-      {{/each}}
-    </div>
-    <div class="row" id="row2">
-      {{#each row2Call}}
-        {{>tile}}
-      {{/each}}
-    </div>
-    <div class="row" id="row3">
-      {{#each row3Call}}
-        {{>tile}}
-      {{/each}}
-    </div>
-    <div class="row" id="row4">
-      {{#each row4Call}}
-        {{>tile}}
-      {{/each}}
+    <div class="sideboard">
+      <div class="playerInfo">
+      </div>
+      <div class="marketplace">
+        <div class="row" id="market0">
+          {{#each market0Call}}
+            <img class="merchandise {{type}}" src="../img/merch/{{type}}.png">
+          {{/each}}
+        </div>
+        <div class="row" id="market1">
+          {{#each market1Call}}
+            <img class="merchandise {{type}}" src="../img/merch/{{type}}.png">
+          {{/each}}
+        </div>
+        <div class="row" id="market2">
+          {{#each market2Call}}
+            <img class="merchandise {{type}}" src="../img/merch/{{type}}.png">
+          {{/each}}
+        </div>
+      </div>
     </div>
   </div>
   <!-- {{showMeeple}} -->

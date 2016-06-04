@@ -8,10 +8,15 @@ body{
   margin-bottom: 5px;
 }
 
+.table{
+  display: flex;
+  flex-direction: row;
+}
+
 .board{
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 925px;
 }
 
 .row{
@@ -140,4 +145,30 @@ body{
 .djinn img{
   height: 150px;
   width: 150px;
+}
+
+.sideboard{
+  display: flex;
+  flex-direction: column;
+  width: 100%
+}
+
+.playerInfo{
+  height: 100px;
+}
+
+.marketplace{
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  width: 100%;
+}
+
+#market0, #market1, #market2{
+  margin-left: 50px;
+}
+
+.merchandise{
+  width: 92px;
+  height: 150px;
 }

@@ -124,7 +124,7 @@ Meteor.methods({
         tempDeck.splice(rand, 1);
 
         GameList.update({_id: gameId}, {
-          $push: { Marketplace: drawnItem.name }
+          $push: { Marketplace: {type: drawnItem.name }}
         })
       }
 
