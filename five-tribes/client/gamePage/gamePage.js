@@ -6,9 +6,10 @@ Template.gameLoad.onRendered(function(){
   $("#pileInHand").hide();
   var selectedGameId = Session.get("selectedGame");
   setTimeout(function(){
-  var boardArray = GameList.find({_id:selectedGameId}, {GameBoard: 1}).fetch().map(function(x){return x.GameBoard;})[0];
+  var boardArray = GameList.find({_id:selectedGameId},
+    {GameBoard: 1}).fetch().map(function(x){return x.GameBoard;})[0];
+  console.log(boardArray);
 
-     console.log(boardArray);
   for(i in boardArray){
     $("#" + boardArray[i].tileId).data('arrayplace', boardArray[i]._id);
     if (boardArray[i].m_assassin){
